@@ -11,14 +11,15 @@ namespace LiveSplit.SonicFrontiers
         {
             if (watchers.Status.Current == Status.Quit && watchers.Status.Old == Status.NewGameMenu) // Main trigger for story mode
                 return Settings.StoryStart;
-            else if (Settings.ArcadeStart && watchers.CurrentGameMode == GameMode.CyberspaceChallenge) //removed Aracde check since it's not a category anymore
+            else if (Settings.ArcadeStart && watchers.CurrentGameMode == GameMode.CyberspaceChallenge) //removed Arcade check since it's not a category anymore
                 return (watchers.LevelID.Current != watchers.LevelID.Old) && watchers.LevelID.Old == LevelID.MainMenu;
             else if (Settings.BossRushStart && watchers.CurrentGameMode == GameMode.BossRush)
                 return watchers.LevelID.Old == LevelID.MainMenu && (watchers.LevelID.Current == LevelID.Island_Kronos_BossRush || watchers.LevelID.Current == LevelID.Island_Ares_BossRush || watchers.LevelID.Current == LevelID.Island_Chaos_BossRush || watchers.LevelID.Current == LevelID.Island_Ouranos_BossRush);
             else if (watchers.LevelID.Current == LevelID.Island_Another_Ouranos &&
                      watchers.LevelID.Old == LevelID.Island_Ouranos)
                 return true; // make this a setting
-            else if (Settings.IslandILStart && watchers.LevelID.Old == LevelID.MainMenu && (watchers.LevelID.Current == LevelID.Island_Ares || watchers.LevelID.Current == LevelID.Island_Chaos || watchers.LevelID.Current == LevelID.Island_Ouranos)){
+            else if (Settings.IslandILStart && watchers.LevelID.Old == LevelID.MainMenu && (watchers.LevelID.Current == LevelID.Island_Ares || watchers.LevelID.Current == LevelID.Island_Chaos || watchers.LevelID.Current == LevelID.Island_Ouranos))
+            {
                 watchers.AlreadyTriggeredBools.Add("Island_Kronos_story"); //fixes a bug where island swaps would split in ILs
                 return true;
             }  
@@ -115,6 +116,12 @@ namespace LiveSplit.SonicFrontiers
             if (watchers.MusicNotes.Old == null)
             {
                 Log.Warning("watchers musicnotes old is null");
+            }
+
+            // Island swap split
+            if (Settings.IslandSwapSplit && watchers.LevelID.Current == LevelID.Island_Kronos && (watchers.LevelID.Old == LevelID.Island_Ares || watchers.LevelID.Old == LevelID.Island_Chaos || watchers.LevelID.Old == LevelID.Island_Ouranos))
+            {
+                return true;
             }
             
             // Final boss split

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chkIslandILStart = new System.Windows.Forms.CheckBox();
             this.chkBossRushStart = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.chkArcade1_1 = new System.Windows.Forms.CheckBox();
@@ -290,7 +291,7 @@
             this.chkFocus = new System.Windows.Forms.CheckBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.DiscordLink = new System.Windows.Forms.LinkLabel();
-            this.chkIslandILStart = new System.Windows.Forms.CheckBox();
+            this.chkIslandSwapSplit = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -358,6 +359,16 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Auto start settings";
+            // 
+            // chkIslandILStart
+            // 
+            this.chkIslandILStart.AutoSize = true;
+            this.chkIslandILStart.Location = new System.Drawing.Point(256, 34);
+            this.chkIslandILStart.Name = "chkIslandILStart";
+            this.chkIslandILStart.Size = new System.Drawing.Size(96, 24);
+            this.chkIslandILStart.TabIndex = 7;
+            this.chkIslandILStart.Text = "Island IL";
+            this.chkIslandILStart.UseVisualStyleBackColor = true;
             // 
             // chkBossRushStart
             // 
@@ -3615,6 +3626,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.chkIslandSwapSplit);
             this.tabPage1.Controls.Add(this.chkMusicNoteAny);
             this.tabPage1.Controls.Add(this.groupBox4);
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
@@ -3838,15 +3850,15 @@
             this.DiscordLink.Text = "Need help setting this up? Ask on Discord";
             this.DiscordLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.DiscordLink_LinkClicked);
             // 
-            // chkIslandILStart
+            // chkIslandSwapSplit
             // 
-            this.chkIslandILStart.AutoSize = true;
-            this.chkIslandILStart.Location = new System.Drawing.Point(256, 34);
-            this.chkIslandILStart.Name = "chkIslandILStart";
-            this.chkIslandILStart.Size = new System.Drawing.Size(96, 24);
-            this.chkIslandILStart.TabIndex = 7;
-            this.chkIslandILStart.Text = "Island IL";
-            this.chkIslandILStart.UseVisualStyleBackColor = true;
+            this.chkIslandSwapSplit.AutoSize = true;
+            this.chkIslandSwapSplit.Location = new System.Drawing.Point(237, 46);
+            this.chkIslandSwapSplit.Name = "chkIslandSwapSplit";
+            this.chkIslandSwapSplit.Size = new System.Drawing.Size(246, 24);
+            this.chkIslandSwapSplit.TabIndex = 3;
+            this.chkIslandSwapSplit.Text = "Split on island swap to Kronos";
+            this.chkIslandSwapSplit.UseVisualStyleBackColor = true;
             // 
             // Settings
             // 
@@ -3946,6 +3958,7 @@
             this.groupBox31.ResumeLayout(false);
             this.groupBox31.PerformLayout();
             this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
@@ -4227,5 +4240,6 @@
         private System.Windows.Forms.CheckBox chk_4_E_story;
         private System.Windows.Forms.CheckBox chk_4_D_story;
         private System.Windows.Forms.CheckBox chkIslandILStart;
+        private System.Windows.Forms.CheckBox chkIslandSwapSplit;
     }
 }

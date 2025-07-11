@@ -139,6 +139,9 @@ namespace LiveSplit.SonicFrontiers
         //Music Notes
         public bool Split_AnyNote { get; set; }
 
+        //Island swapping
+        public bool IslandSwapSplit { get; set; }
+
         //Another Story
         public bool Amy_First { get; set; }
         public bool Knuckles_First { get; set; }
@@ -429,6 +432,8 @@ namespace LiveSplit.SonicFrontiers
             chkBoss4_11.DataBindings.Add("Checked", this, "Boss4_11", false, DataSourceUpdateMode.OnPropertyChanged);
             chkMusicNoteAny.DataBindings.Add("Checked", this, "MusicNoteAny", false,
                 DataSourceUpdateMode.OnPropertyChanged);
+            chkIslandSwapSplit.DataBindings.Add("Checked", this, "IslandSwapSplit", false,
+                DataSourceUpdateMode.OnPropertyChanged);
             chk_AmyFirst.DataBindings.Add("Checked", this, "Amy_First", false, DataSourceUpdateMode.OnPropertyChanged);
             chk_KnucklesFirst.DataBindings.Add("Checked", this, "Knuckles_First", false, DataSourceUpdateMode.OnPropertyChanged);
             chk_TailsFirst.DataBindings.Add("Checked", this, "Tails_First", false, DataSourceUpdateMode.OnPropertyChanged);
@@ -461,6 +466,7 @@ namespace LiveSplit.SonicFrontiers
             IslandILStart = true;
 
             MusicNoteAny = false;
+            IslandSwapSplit = false;
 
 
 
@@ -725,6 +731,7 @@ namespace LiveSplit.SonicFrontiers
             settingsNode.AppendChild(ToElement(doc, "Boss4_10", Boss4_10));
             settingsNode.AppendChild(ToElement(doc, "Boss4_11", Boss4_11));
             settingsNode.AppendChild(ToElement(doc, "MusicNoteAny", MusicNoteAny));
+            settingsNode.AppendChild(ToElement(doc, "IslandSwapSplit", IslandSwapSplit));
             return settingsNode;
         }
 
@@ -735,6 +742,7 @@ namespace LiveSplit.SonicFrontiers
             ArcadeStart = ParseBool(settings, "ArcadeStart", true);
             BossRushStart = ParseBool(settings, "BossRushStart", true);
             IslandILStart = ParseBool(settings, "IslandILStart", true);
+            IslandSwapSplit = ParseBool(settings, "IslandSwapSplit", true);
             Arcade1_1 = ParseBool(settings, "Arcade1_1", true);
             Amy_First = ParseBool(settings, "Amy_First", false);
             Knuckles_First = ParseBool(settings, "Knuckles_First", false);
