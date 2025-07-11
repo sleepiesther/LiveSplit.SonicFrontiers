@@ -290,6 +290,7 @@
             this.chkFocus = new System.Windows.Forms.CheckBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.DiscordLink = new System.Windows.Forms.LinkLabel();
+            this.chkIslandILStart = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -343,6 +344,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.chkIslandILStart);
             this.groupBox1.Controls.Add(this.chkBossRushStart);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.chkArcade1_1);
@@ -3836,6 +3838,16 @@
             this.DiscordLink.Text = "Need help setting this up? Ask on Discord";
             this.DiscordLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.DiscordLink_LinkClicked);
             // 
+            // chkIslandILStart
+            // 
+            this.chkIslandILStart.AutoSize = true;
+            this.chkIslandILStart.Location = new System.Drawing.Point(256, 34);
+            this.chkIslandILStart.Name = "chkIslandILStart";
+            this.chkIslandILStart.Size = new System.Drawing.Size(96, 24);
+            this.chkIslandILStart.TabIndex = 7;
+            this.chkIslandILStart.Text = "Island IL";
+            this.chkIslandILStart.UseVisualStyleBackColor = true;
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -4214,5 +4226,6 @@
         private System.Windows.Forms.CheckBox chk_4_F_story;
         private System.Windows.Forms.CheckBox chk_4_E_story;
         private System.Windows.Forms.CheckBox chk_4_D_story;
+        private System.Windows.Forms.CheckBox chkIslandILStart;
     }
 }

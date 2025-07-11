@@ -14,6 +14,7 @@ namespace LiveSplit.SonicFrontiers
         public bool ArcadeStart { get; set; }
         public bool Arcade1_1 { get; set; }
         public bool BossRushStart { get; set; }
+        public bool IslandILStart { get; set; }
 
         // Skills
         public bool Skill_Cyloop { get; set; }
@@ -247,6 +248,7 @@ namespace LiveSplit.SonicFrontiers
             chkStoryStart.DataBindings.Add("Checked", this, "StoryStart", false, DataSourceUpdateMode.OnPropertyChanged);
             chkArcadeStart.DataBindings.Add("Checked", this, "ArcadeStart", false, DataSourceUpdateMode.OnPropertyChanged);
             chkBossRushStart.DataBindings.Add("Checked", this, "BossRushStart", false, DataSourceUpdateMode.OnPropertyChanged);
+            chkIslandILStart.DataBindings.Add("Checked", this, "IslandILStart", false, DataSourceUpdateMode.OnPropertyChanged);
             chkArcade1_1.DataBindings.Add("Checked", this, "Arcade1_1", false, DataSourceUpdateMode.OnPropertyChanged);
             chkSkill_Cyloop.DataBindings.Add("Checked", this, "Skill_Cyloop", false, DataSourceUpdateMode.OnPropertyChanged);
             chkSkill_PhantomRush.DataBindings.Add("Checked", this, "Skill_PhantomRush", false, DataSourceUpdateMode.OnPropertyChanged);
@@ -456,6 +458,7 @@ namespace LiveSplit.SonicFrontiers
             WFocus = false;
             StoryStart = ArcadeStart = Arcade1_1 = true;
             BossRushStart = true;
+            IslandILStart = true;
 
             MusicNoteAny = false;
 
@@ -523,6 +526,7 @@ namespace LiveSplit.SonicFrontiers
             settingsNode.AppendChild(ToElement(doc, "StoryStart", StoryStart));
             settingsNode.AppendChild(ToElement(doc, "ArcadeStart", ArcadeStart));
             settingsNode.AppendChild(ToElement(doc, "BossRushStart", BossRushStart));
+            settingsNode.AppendChild(ToElement(doc, "IslandILStart", IslandILStart));
             settingsNode.AppendChild(ToElement(doc, "Amy_First", Amy_First));
             settingsNode.AppendChild(ToElement(doc, "Knuckles_First", Knuckles_First));
             settingsNode.AppendChild(ToElement(doc, "Tails_First", Tails_First));
@@ -730,6 +734,7 @@ namespace LiveSplit.SonicFrontiers
             StoryStart = ParseBool(settings, "StoryStart", true);
             ArcadeStart = ParseBool(settings, "ArcadeStart", true);
             BossRushStart = ParseBool(settings, "BossRushStart", true);
+            IslandILStart = ParseBool(settings, "IslandILStart", true);
             Arcade1_1 = ParseBool(settings, "Arcade1_1", true);
             Amy_First = ParseBool(settings, "Amy_First", false);
             Knuckles_First = ParseBool(settings, "Knuckles_First", false);

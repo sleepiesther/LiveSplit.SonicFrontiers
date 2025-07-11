@@ -89,6 +89,7 @@ namespace LiveSplit.SonicFrontiers
                 if (Start())
                 {
                     timer.Start();
+                    timer.CurrentState.IsGameTimePaused = IsLoading();
                 }
             }
         }

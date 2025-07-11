@@ -18,6 +18,10 @@ namespace LiveSplit.SonicFrontiers
             else if (watchers.LevelID.Current == LevelID.Island_Another_Ouranos &&
                      watchers.LevelID.Old == LevelID.Island_Ouranos)
                 return true; // make this a setting
+            else if (Settings.IslandILStart && watchers.LevelID.Old == LevelID.MainMenu && (watchers.LevelID.Current == LevelID.Island_Ares || watchers.LevelID.Current == LevelID.Island_Chaos || watchers.LevelID.Current == LevelID.Island_Ouranos)){
+                watchers.AlreadyTriggeredBools.Add("Island_Kronos_story"); //fixes a bug where island swaps would split in ILs
+                return true;
+            }  
             return false;
         }
 
