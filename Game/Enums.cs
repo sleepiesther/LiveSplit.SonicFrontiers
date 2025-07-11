@@ -42,6 +42,15 @@ namespace LiveSplit.SonicFrontiers
         w4_7,
         w4_8,
         w4_9,
+        w4_A,
+        w4_B,
+        w4_C,
+        w4_D,
+        w4_E,
+        w4_F,
+        w4_G,
+        w4_H,
+        w4_I,
         Island_Kronos,
         Island_Ares,
         Island_Chaos,
@@ -168,6 +177,15 @@ namespace LiveSplit.SonicFrontiers
             { "w9d05", SonicFrontiers.LevelID.w4_7 },    // 4-7
             { "w7d05", SonicFrontiers.LevelID.w4_8 },    // 4-8
             { "w9d07", SonicFrontiers.LevelID.w4_9 },    // 4-9
+            { "w6d21", SonicFrontiers.LevelID.w4_A },    // 4-A
+            { "w6d22", SonicFrontiers.LevelID.w4_B },    // 4-B
+            { "w6d23", SonicFrontiers.LevelID.w4_C },    // 4-C
+            { "w7d21", SonicFrontiers.LevelID.w4_D },    // 4-D
+            { "w7d22", SonicFrontiers.LevelID.w4_E },    // 4-E
+            { "w7d23", SonicFrontiers.LevelID.w4_F },    // 4-F
+            { "w9d21", SonicFrontiers.LevelID.w4_G },    // 4-G
+            { "w9d22", SonicFrontiers.LevelID.w4_H },    // 4-H
+            { "w9d23", SonicFrontiers.LevelID.w4_I },    // 4-I
             { "w1r03", SonicFrontiers.LevelID.Island_Kronos },    // Kronos Island
             { "w2r01", SonicFrontiers.LevelID.Island_Ares },    // Ares Island
             { "w3r01", SonicFrontiers.LevelID.Island_Chaos },    // Chaos Island

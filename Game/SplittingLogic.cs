@@ -215,6 +215,15 @@ namespace LiveSplit.SonicFrontiers
             LevelID.w4_7 => Settings.w4_7_story,
             LevelID.w4_8 => Settings.w4_8_story,
             LevelID.w4_9 => Settings.w4_9_story,
+            LevelID.w4_A => Settings.w4_A_story,
+            LevelID.w4_B => Settings.w4_B_story,
+            LevelID.w4_C => Settings.w4_C_story,
+            LevelID.w4_D => Settings.w4_D_story,
+            LevelID.w4_E => Settings.w4_E_story,
+            LevelID.w4_F => Settings.w4_F_story,
+            LevelID.w4_G => Settings.w4_G_story,
+            LevelID.w4_H => Settings.w4_H_story,
+            LevelID.w4_I => Settings.w4_I_story,
             _ => false,
         };
 

@@ -141,7 +141,7 @@ namespace LiveSplit.SonicFrontiers
                     return Flags.NoteFlags;
                 }
             );
-            StoryModeCyberSpaceCompletionFlag = new FakeMemoryWatcher<bool>(() => CurrentGameMode == GameMode.Story && LevelID.Current <= SonicFrontiers.LevelID.w4_9 && (Status.Current == SonicFrontiers.Status.Result || StoryModeCyberSpaceCompletionFlag.Old));
+            StoryModeCyberSpaceCompletionFlag = new FakeMemoryWatcher<bool>(() => CurrentGameMode == GameMode.Story && LevelID.Current <= SonicFrontiers.LevelID.w4_I && (Status.Current == SonicFrontiers.Status.Result || StoryModeCyberSpaceCompletionFlag.Old));
 
             QTEStatus = new FakeMemoryWatcher<QTEResolveStatus>(() =>
             {

@@ -6,7 +6,7 @@ namespace LiveSplit.SonicFrontiers
 {
     public partial class Settings : UserControl
     {
-        
+
 
         // General
         public bool WFocus { get; set; }
@@ -129,15 +129,15 @@ namespace LiveSplit.SonicFrontiers
         public bool Ouranos_YellowCE { get; set; }
         public bool Ouranos_CyanCE { get; set; }
         public bool Ouranos_WhiteCE { get; set; }
-        
+
         public bool Ouranos_FinalDoor { get; set; }
         public bool Island_Ouranos_fishing { get; set; }
-        
 
-        
+
+
         //Music Notes
         public bool Split_AnyNote { get; set; }
-        
+
         //Another Story
         public bool Amy_First { get; set; }
         public bool Knuckles_First { get; set; }
@@ -150,8 +150,17 @@ namespace LiveSplit.SonicFrontiers
         public bool Knuckles_Second { get; set; }
         public bool Tails_Second { get; set; }
         public bool Sonic_MasterTrial { get; set; }
-        
-        
+        public bool w4_A_story { get; set; }
+        public bool w4_B_story { get; set; }
+        public bool w4_C_story { get; set; }
+        public bool w4_D_story { get; set; }
+        public bool w4_E_story { get; set; }
+        public bool w4_F_story { get; set; }
+        public bool w4_G_story { get; set; }
+        public bool w4_H_story { get; set; }
+        public bool w4_I_story { get; set; }
+
+
         // Arcade mode
         public bool w1_1_arcade { get; set; }
         public bool w1_2_arcade { get; set; }
@@ -224,9 +233,9 @@ namespace LiveSplit.SonicFrontiers
         public bool Boss4_9 { get; set; }
         public bool Boss4_10 { get; set; }
         public bool Boss4_11 { get; set; }
-        
+
         //Notes
-        
+
         public bool MusicNoteAny { get; set; }
         public Settings()
         {
@@ -434,16 +443,25 @@ namespace LiveSplit.SonicFrontiers
                 DataSourceUpdateMode.OnPropertyChanged);
             chk_MasterTrial.DataBindings.Add("Checked", this, "Sonic_MasterTrial", false,
                 DataSourceUpdateMode.OnPropertyChanged);
+            chk_4_A_story.DataBindings.Add("Checked", this, "w4_A_story", false, DataSourceUpdateMode.OnPropertyChanged);
+            chk_4_B_story.DataBindings.Add("Checked", this, "w4_B_story", false, DataSourceUpdateMode.OnPropertyChanged);
+            chk_4_C_story.DataBindings.Add("Checked", this, "w4_C_story", false, DataSourceUpdateMode.OnPropertyChanged);
+            chk_4_D_story.DataBindings.Add("Checked", this, "w4_D_story", false, DataSourceUpdateMode.OnPropertyChanged);
+            chk_4_E_story.DataBindings.Add("Checked", this, "w4_E_story", false, DataSourceUpdateMode.OnPropertyChanged);
+            chk_4_F_story.DataBindings.Add("Checked", this, "w4_F_story", false, DataSourceUpdateMode.OnPropertyChanged);
+            chk_4_G_story.DataBindings.Add("Checked", this, "w4_G_story", false, DataSourceUpdateMode.OnPropertyChanged);
+            chk_4_H_story.DataBindings.Add("Checked", this, "w4_H_story", false, DataSourceUpdateMode.OnPropertyChanged);
+            chk_4_I_story.DataBindings.Add("Checked", this, "w4_I_story", false, DataSourceUpdateMode.OnPropertyChanged);
             // Default Values
             WFocus = false;
             StoryStart = ArcadeStart = Arcade1_1 = true;
             BossRushStart = true;
-            
+
             MusicNoteAny = false;
-            
-           
-            
-            
+
+
+
+
             //Skills
             Skill_Cyloop = Skill_AirTrick = Skill_PhantomRush = Skill_StompAttack = Skill_AutoCombo = Skill_HomingShot = Skill_LoopKick = Skill_QuickCyloop = Skill_RecoverySmash = Skill_SonicBoom = Skill_SpinSlash = Skill_WildRush = false;
 
@@ -451,7 +469,7 @@ namespace LiveSplit.SonicFrontiers
             Kronos_Ninja = Kronos_Door = Kronos_Amy = Kronos_GigantosFirst = Kronos_Tombstones = false;
             Island_Kronos_story = Island_Kronos_fishing = true;
             w1_1_story = w1_2_story = w1_3_story = w1_4_story = w1_5_story = w1_6_story = w1_7_story = false;
-            Kronos_BlueCE = Kronos_RedCE = Kronos_YellowCE = Kronos_WhiteCE = Kronos_GreenCE = Kronos_CyanCE  = Kronos_GigantosStart = Kronos_SuperSonic = false;
+            Kronos_BlueCE = Kronos_RedCE = Kronos_YellowCE = Kronos_WhiteCE = Kronos_GreenCE = Kronos_CyanCE = Kronos_GigantosStart = Kronos_SuperSonic = false;
 
             // Ares
             Ares_Knuckles = Ares_WyvernFirst = Ares_Water = Ares_Crane = false;
@@ -491,10 +509,11 @@ namespace LiveSplit.SonicFrontiers
             Boss2_1 = Boss2_2 = Boss2_3 = Boss2_4 = Boss2_5 = Boss2_6 = Boss2_7 = Boss2_8 = Boss2_9 = Boss2_10 = true;
             Boss3_1 = Boss3_2 = Boss3_3 = Boss3_4 = Boss3_5 = Boss3_6 = Boss3_7 = Boss3_8 = Boss3_9 = true;
             Boss4_1 = Boss4_2 = Boss4_3 = Boss4_4 = Boss4_5 = Boss4_6 = Boss4_7 = Boss4_8 = Boss4_9 = Boss4_10 = Boss4_11 = true;
-            
+
             //Another Story
             Amy_First = Knuckles_First = Tails_First = Sonic_Tower1 = Sonic_Tower2 = Sonic_Tower3 =
                 Sonic_Tower4 = Sonic_MasterTrial = Amy_Second = Knuckles_Second = Tails_Second = true;
+            w4_A_story = w4_B_story = w4_C_story = w4_D_story = w4_E_story = w4_F_story = w4_G_story = w4_H_story = w4_I_story = false;
         }
 
         public XmlNode GetSettings(XmlDocument doc)
@@ -515,6 +534,15 @@ namespace LiveSplit.SonicFrontiers
             settingsNode.AppendChild(ToElement(doc, "Sonic_Tower3", Sonic_Tower3));
             settingsNode.AppendChild(ToElement(doc, "Sonic_Tower4", Sonic_Tower4));
             settingsNode.AppendChild(ToElement(doc, "Sonic_MasterTrial", Sonic_MasterTrial));
+            settingsNode.AppendChild(ToElement(doc, "w4_A_story", w4_A_story));
+            settingsNode.AppendChild(ToElement(doc, "w4_B_story", w4_B_story));
+            settingsNode.AppendChild(ToElement(doc, "w4_C_story", w4_C_story));
+            settingsNode.AppendChild(ToElement(doc, "w4_D_story", w4_D_story));
+            settingsNode.AppendChild(ToElement(doc, "w4_E_story", w4_E_story));
+            settingsNode.AppendChild(ToElement(doc, "w4_F_story", w4_F_story));
+            settingsNode.AppendChild(ToElement(doc, "w4_G_story", w4_G_story));
+            settingsNode.AppendChild(ToElement(doc, "w4_H_story", w4_H_story));
+            settingsNode.AppendChild(ToElement(doc, "w4_I_story", w4_I_story));
             settingsNode.AppendChild(ToElement(doc, "Skill_Cyloop", Skill_Cyloop));
             settingsNode.AppendChild(ToElement(doc, "Skill_PhantomRush", Skill_PhantomRush));
             settingsNode.AppendChild(ToElement(doc, "Skill_AirTrick", Skill_AirTrick));
@@ -620,7 +648,7 @@ namespace LiveSplit.SonicFrontiers
             settingsNode.AppendChild(ToElement(doc, "Ouranos_CyanCE", Ouranos_CyanCE));
             settingsNode.AppendChild(ToElement(doc, "Ouranos_WhiteCE", Ouranos_WhiteCE));
             settingsNode.AppendChild(ToElement(doc, "Island_Ouranos_fishing", Island_Ouranos_fishing));
-            
+
             settingsNode.AppendChild(ToElement(doc, "w1_1_arcade", w1_1_arcade));
             settingsNode.AppendChild(ToElement(doc, "w1_2_arcade", w1_2_arcade));
             settingsNode.AppendChild(ToElement(doc, "w1_3_arcade", w1_3_arcade));
@@ -714,7 +742,16 @@ namespace LiveSplit.SonicFrontiers
             Sonic_Tower3 = ParseBool(settings, "Sonic_Tower3", false);
             Sonic_Tower4 = ParseBool(settings, "Sonic_Tower4", false);
             Sonic_MasterTrial = ParseBool(settings, "Sonic_MasterTrial", false);
-;           Skill_Cyloop = ParseBool(settings, "Skill_Cyloop", false);
+            w4_A_story = ParseBool(settings, "w4_A_story");
+            w4_B_story = ParseBool(settings, "w4_B_story");
+            w4_C_story = ParseBool(settings, "w4_C_story");
+            w4_D_story = ParseBool(settings, "w4_D_story");
+            w4_E_story = ParseBool(settings, "w4_E_story");
+            w4_F_story = ParseBool(settings, "w4_F_story");
+            w4_G_story = ParseBool(settings, "w4_G_story");
+            w4_H_story = ParseBool(settings, "w4_H_story");
+            w4_I_story = ParseBool(settings, "w4_I_story");
+            Skill_Cyloop = ParseBool(settings, "Skill_Cyloop", false);
             Skill_AirTrick = ParseBool(settings, "Skill_AirTrick", false);
             Skill_PhantomRush = ParseBool(settings, "Skill_PhantomRush", false);
             Skill_StompAttack = ParseBool(settings, "Skill_StompAttack", false);
