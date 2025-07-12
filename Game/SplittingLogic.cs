@@ -246,6 +246,7 @@ namespace LiveSplit.SonicFrontiers
             "Amy_Second" => Settings.Amy_Second,
             "Knuckles_Second" => Settings.Knuckles_Second,
             "Tails_Second" => Settings.Tails_Second,
+            "Sonic_MasterTrial" => Settings.Sonic_MasterTrial,
             "Sonic_Tower1" => Settings.Sonic_Tower1,
             "Sonic_Tower2" => Settings.Sonic_Tower2,
             "Sonic_Tower3" => Settings.Sonic_Tower3,

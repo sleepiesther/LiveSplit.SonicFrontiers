@@ -2303,7 +2303,6 @@
             // 
             // chk_MasterTrial
             // 
-            this.chk_MasterTrial.Enabled = false;
             this.chk_MasterTrial.Location = new System.Drawing.Point(9, 186);
             this.chk_MasterTrial.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chk_MasterTrial.Name = "chk_MasterTrial";
