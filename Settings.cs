@@ -129,7 +129,7 @@ namespace LiveSplit.SonicFrontiers
         public bool Ouranos_GreenCE { get; set; }
         public bool Ouranos_YellowCE { get; set; }
         public bool Ouranos_CyanCE { get; set; }
-        public bool Ouranos_WhiteCE { get; set; }
+        //public bool Ouranos_WhiteCE { get; set; }
 
         public bool Ouranos_FinalDoor { get; set; }
         public bool Island_Ouranos_fishing { get; set; }
@@ -357,7 +357,7 @@ namespace LiveSplit.SonicFrontiers
             chkOuranos_GreenCE.DataBindings.Add("Checked", this, "Ouranos_GreenCE", false, DataSourceUpdateMode.OnPropertyChanged);
             chkOuranos_YellowCE.DataBindings.Add("Checked", this, "Ouranos_YellowCE", false, DataSourceUpdateMode.OnPropertyChanged);
             chkOuranos_CyanCE.DataBindings.Add("Checked", this, "Ouranos_CyanCE", false, DataSourceUpdateMode.OnPropertyChanged);
-            chkOuranos_WhiteCE.DataBindings.Add("Checked", this, "Ouranos_WhiteCE", false, DataSourceUpdateMode.OnPropertyChanged);
+            //chkOuranos_WhiteCE.DataBindings.Add("Checked", this, "Ouranos_WhiteCE", false, DataSourceUpdateMode.OnPropertyChanged);
             chk54_fishing.DataBindings.Add("Checked", this, "Island_Ouranos_fishing", false, DataSourceUpdateMode.OnPropertyChanged);
             chk0_arcade.DataBindings.Add("Checked", this, "w1_1_arcade", false, DataSourceUpdateMode.OnPropertyChanged);
             chk1_arcade.DataBindings.Add("Checked", this, "w1_2_arcade", false, DataSourceUpdateMode.OnPropertyChanged);
@@ -503,7 +503,7 @@ namespace LiveSplit.SonicFrontiers
             Ouranos_Bridge = Ouranos_SupremeDefeated = false;
             FinalBoss = true;
             w4_1_story = w4_2_story = w4_3_story = w4_4_story = w4_5_story = w4_6_story = w4_7_story = w4_8_story = w4_9_story = false;
-            Ouranos_BlueCE = Ouranos_RedCE = Ouranos_GreenCE = Ouranos_YellowCE = Ouranos_CyanCE = Ouranos_WhiteCE = Ouranos_FinalDoor = false;
+            Ouranos_BlueCE = Ouranos_RedCE = Ouranos_GreenCE = Ouranos_YellowCE = Ouranos_CyanCE = Ouranos_FinalDoor = false;
             Island_Ouranos_fishing = true;
 
             // Arcade mode
@@ -656,7 +656,7 @@ namespace LiveSplit.SonicFrontiers
             settingsNode.AppendChild(ToElement(doc, "Ouranos_GreenCE", Ouranos_GreenCE));
             settingsNode.AppendChild(ToElement(doc, "Ouranos_YellowCE", Ouranos_YellowCE));
             settingsNode.AppendChild(ToElement(doc, "Ouranos_CyanCE", Ouranos_CyanCE));
-            settingsNode.AppendChild(ToElement(doc, "Ouranos_WhiteCE", Ouranos_WhiteCE));
+            //settingsNode.AppendChild(ToElement(doc, "Ouranos_WhiteCE", Ouranos_WhiteCE));
             settingsNode.AppendChild(ToElement(doc, "Island_Ouranos_fishing", Island_Ouranos_fishing));
 
             settingsNode.AppendChild(ToElement(doc, "w1_1_arcade", w1_1_arcade));
@@ -867,7 +867,7 @@ namespace LiveSplit.SonicFrontiers
             Ouranos_GreenCE = ParseBool(settings, "Ouranos_GreenCE", false);
             Ouranos_YellowCE = ParseBool(settings, "Ouranos_YellowCE", false);
             Ouranos_CyanCE = ParseBool(settings, "Ouranos_CyanCE", false);
-            Ouranos_WhiteCE = ParseBool(settings, "Ouranos_WhiteCE", false);
+            //Ouranos_WhiteCE = ParseBool(settings, "Ouranos_WhiteCE", false);
             Island_Ouranos_fishing = ParseBool(settings, "Island_Ouranos_fishing", true);
             w1_1_arcade = ParseBool(settings, "w1_1_arcade", true);
             w1_2_arcade = ParseBool(settings, "w1_2_arcade", true);
@@ -1034,7 +1034,7 @@ namespace LiveSplit.SonicFrontiers
             chkOuranos_GreenCE.Checked = false;
             chkOuranos_YellowCE.Checked = false;
             chkOuranos_CyanCE.Checked = false;
-            chkOuranos_WhiteCE.Checked = false;
+            //chkOuranos_WhiteCE.Checked = false;
             chk54_fishing.Checked = true;
             chkOuranos_FinalDoor.Checked = false;
         }

@@ -148,7 +148,7 @@
             this.chk22_story = new System.Windows.Forms.CheckBox();
             this.chk21_story = new System.Windows.Forms.CheckBox();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
-            this.chkOuranos_WhiteCE = new System.Windows.Forms.CheckBox();
+            //this.chkOuranos_WhiteCE = new System.Windows.Forms.CheckBox();
             this.chkOuranos_CyanCE = new System.Windows.Forms.CheckBox();
             this.chkOuranos_GreenCE = new System.Windows.Forms.CheckBox();
             this.chkOuranos_YellowCE = new System.Windows.Forms.CheckBox();
@@ -1892,7 +1892,7 @@
             // 
             // groupBox17
             // 
-            this.groupBox17.Controls.Add(this.chkOuranos_WhiteCE);
+            //this.groupBox17.Controls.Add(this.chkOuranos_WhiteCE);
             this.groupBox17.Controls.Add(this.chkOuranos_CyanCE);
             this.groupBox17.Controls.Add(this.chkOuranos_GreenCE);
             this.groupBox17.Controls.Add(this.chkOuranos_YellowCE);
@@ -1909,15 +1909,15 @@
             // 
             // chkOuranos_WhiteCE
             // 
-            this.chkOuranos_WhiteCE.AutoSize = true;
-            this.chkOuranos_WhiteCE.Dock = System.Windows.Forms.DockStyle.Top;
-            this.chkOuranos_WhiteCE.Location = new System.Drawing.Point(15, 154);
-            this.chkOuranos_WhiteCE.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.chkOuranos_WhiteCE.Name = "chkOuranos_WhiteCE";
-            this.chkOuranos_WhiteCE.Size = new System.Drawing.Size(174, 24);
-            this.chkOuranos_WhiteCE.TabIndex = 13;
-            this.chkOuranos_WhiteCE.Text = "White Emerald";
-            this.chkOuranos_WhiteCE.UseVisualStyleBackColor = true;
+            //this.chkOuranos_WhiteCE.AutoSize = true;
+            //this.chkOuranos_WhiteCE.Dock = System.Windows.Forms.DockStyle.Top;
+            //this.chkOuranos_WhiteCE.Location = new System.Drawing.Point(15, 154);
+            //this.chkOuranos_WhiteCE.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            //this.chkOuranos_WhiteCE.Name = "chkOuranos_WhiteCE";
+            //this.chkOuranos_WhiteCE.Size = new System.Drawing.Size(174, 24);
+            //this.chkOuranos_WhiteCE.TabIndex = 13;
+            //this.chkOuranos_WhiteCE.Text = "White Emerald";
+            //this.chkOuranos_WhiteCE.UseVisualStyleBackColor = true;
             // 
             // chkOuranos_CyanCE
             // 
@@ -4105,7 +4105,7 @@
         private System.Windows.Forms.CheckBox chk54_fishing;
         private System.Windows.Forms.GroupBox groupBox16;
         private System.Windows.Forms.GroupBox groupBox17;
-        private System.Windows.Forms.CheckBox chkOuranos_WhiteCE;
+        //private System.Windows.Forms.CheckBox chkOuranos_WhiteCE;
         private System.Windows.Forms.CheckBox chkOuranos_CyanCE;
         private System.Windows.Forms.CheckBox chkOuranos_YellowCE;
         private System.Windows.Forms.CheckBox chkOuranos_GreenCE;

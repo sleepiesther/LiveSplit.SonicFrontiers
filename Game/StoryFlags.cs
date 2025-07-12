@@ -152,7 +152,7 @@ namespace LiveSplit.SonicFrontiers
             public bool Ouranos_GreenCE => IsValid && _80C1.BitCheck(1);
             public bool Ouranos_YellowCE => IsValid && _80C1.BitCheck(2);
             public bool Ouranos_CyanCE => IsValid && _80C1.BitCheck(3);
-            public bool Ouranos_WhiteCE => IsValid && _80C1.BitCheck(4);
+            //public bool Ouranos_WhiteCE => IsValid && _80C1.BitCheck(4);
 
             public bool Ouranos_FinalDoor => IsValid && _82B2.BitCheck(4);
             

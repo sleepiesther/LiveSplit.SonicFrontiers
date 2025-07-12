@@ -322,7 +322,7 @@ namespace LiveSplit.SonicFrontiers
             "Ouranos_GreenCE" => Settings.Ouranos_GreenCE,
             "Ouranos_YellowCE" => Settings.Ouranos_YellowCE,
             "Ouranos_CyanCE" => Settings.Ouranos_CyanCE,
-            "Ouranos_WhiteCE" => Settings.Ouranos_WhiteCE,
+            //"Ouranos_WhiteCE" => Settings.Ouranos_WhiteCE,
             "Island_Ouranos_fishing" => Settings.Island_Ouranos_fishing,
             "Ouranos_FinalDoor" => Settings.Ouranos_FinalDoor,
             _ => false,
