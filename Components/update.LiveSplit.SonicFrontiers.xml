@@ -6,7 +6,7 @@
 		</files>
 		<changelog>
 			<change>Added toggleable autosplitting on completing Cyber Space levels in Another Story</change>
-			<change>Added togglebale autostart on loading from main menu into Ares, Chaos, and Ouranos. For use in Island ILs</change>	
+			<change>Added toggleable autostart on loading from main menu into Ares, Chaos, and Ouranos. For use in Island ILs</change>	
 			<change>Fixed a bug that caused an autosplit when island swapping during island ILs</change>
 			<change>Added a toggleable autosplit when island swapping to Kronos</change>
 			<change>Removed Ouranos White CE split as it is no longer functional</change>
