@@ -10,6 +10,7 @@ namespace LiveSplit.SonicFrontiers
 
         // General
         public bool WFocus { get; set; }
+        public bool AutoReset { get; set; }
         public bool StoryStart { get; set; }
         public bool ArcadeStart { get; set; }
         public bool Arcade1_1 { get; set; }
@@ -248,6 +249,7 @@ namespace LiveSplit.SonicFrontiers
 
             // General settings
             chkFocus.DataBindings.Add("Checked", this, "WFocus", false, DataSourceUpdateMode.OnPropertyChanged);
+            chk_AutoReset.DataBindings.Add("Checked", this, "AutoReset", false, DataSourceUpdateMode.OnPropertyChanged);
             chkStoryStart.DataBindings.Add("Checked", this, "StoryStart", false, DataSourceUpdateMode.OnPropertyChanged);
             chkArcadeStart.DataBindings.Add("Checked", this, "ArcadeStart", false, DataSourceUpdateMode.OnPropertyChanged);
             chkBossRushStart.DataBindings.Add("Checked", this, "BossRushStart", false, DataSourceUpdateMode.OnPropertyChanged);
@@ -461,7 +463,7 @@ namespace LiveSplit.SonicFrontiers
             chk_4_I_story.DataBindings.Add("Checked", this, "w4_I_story", false, DataSourceUpdateMode.OnPropertyChanged);
             // Default Values
             WFocus = false;
-            StoryStart = ArcadeStart = Arcade1_1 = true;
+            AutoReset = StoryStart = ArcadeStart = Arcade1_1 = true;
             BossRushStart = true;
             IslandILStart = true;
 
@@ -529,6 +531,7 @@ namespace LiveSplit.SonicFrontiers
         {
             XmlElement settingsNode = doc.CreateElement("Settings");
             settingsNode.AppendChild(ToElement(doc, "WFocus", WFocus));
+            settingsNode.AppendChild(ToElement(doc, "AutoReset", AutoReset));
             settingsNode.AppendChild(ToElement(doc, "StoryStart", StoryStart));
             settingsNode.AppendChild(ToElement(doc, "ArcadeStart", ArcadeStart));
             settingsNode.AppendChild(ToElement(doc, "BossRushStart", BossRushStart));
@@ -738,6 +741,7 @@ namespace LiveSplit.SonicFrontiers
         public void SetSettings(XmlNode settings)
         {
             WFocus = ParseBool(settings, "WFocus", false);
+            AutoReset = ParseBool(settings, "AutoReset", true);
             StoryStart = ParseBool(settings, "StoryStart", true);
             ArcadeStart = ParseBool(settings, "ArcadeStart", true);
             BossRushStart = ParseBool(settings, "BossRushStart", true);

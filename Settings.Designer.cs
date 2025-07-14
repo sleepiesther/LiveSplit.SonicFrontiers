@@ -148,7 +148,6 @@
             this.chk22_story = new System.Windows.Forms.CheckBox();
             this.chk21_story = new System.Windows.Forms.CheckBox();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
-            //this.chkOuranos_WhiteCE = new System.Windows.Forms.CheckBox();
             this.chkOuranos_CyanCE = new System.Windows.Forms.CheckBox();
             this.chkOuranos_GreenCE = new System.Windows.Forms.CheckBox();
             this.chkOuranos_YellowCE = new System.Windows.Forms.CheckBox();
@@ -273,6 +272,7 @@
             this.chkBoss1_2 = new System.Windows.Forms.CheckBox();
             this.chkBoss1_1 = new System.Windows.Forms.CheckBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.chkIslandSwapSplit = new System.Windows.Forms.CheckBox();
             this.chkMusicNoteAny = new System.Windows.Forms.CheckBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.chkSkill_RecoverySmash = new System.Windows.Forms.CheckBox();
@@ -290,8 +290,8 @@
             this.autosplitterVersion = new System.Windows.Forms.Label();
             this.chkFocus = new System.Windows.Forms.CheckBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.chk_AutoReset = new System.Windows.Forms.CheckBox();
             this.DiscordLink = new System.Windows.Forms.LinkLabel();
-            this.chkIslandSwapSplit = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -1892,7 +1892,6 @@
             // 
             // groupBox17
             // 
-            //this.groupBox17.Controls.Add(this.chkOuranos_WhiteCE);
             this.groupBox17.Controls.Add(this.chkOuranos_CyanCE);
             this.groupBox17.Controls.Add(this.chkOuranos_GreenCE);
             this.groupBox17.Controls.Add(this.chkOuranos_YellowCE);
@@ -1906,18 +1905,6 @@
             this.groupBox17.TabIndex = 8;
             this.groupBox17.TabStop = false;
             this.groupBox17.Text = "Chaos emeralds";
-            // 
-            // chkOuranos_WhiteCE
-            // 
-            //this.chkOuranos_WhiteCE.AutoSize = true;
-            //this.chkOuranos_WhiteCE.Dock = System.Windows.Forms.DockStyle.Top;
-            //this.chkOuranos_WhiteCE.Location = new System.Drawing.Point(15, 154);
-            //this.chkOuranos_WhiteCE.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            //this.chkOuranos_WhiteCE.Name = "chkOuranos_WhiteCE";
-            //this.chkOuranos_WhiteCE.Size = new System.Drawing.Size(174, 24);
-            //this.chkOuranos_WhiteCE.TabIndex = 13;
-            //this.chkOuranos_WhiteCE.Text = "White Emerald";
-            //this.chkOuranos_WhiteCE.UseVisualStyleBackColor = true;
             // 
             // chkOuranos_CyanCE
             // 
@@ -3636,6 +3623,16 @@
             this.tabPage1.Text = "Misc.";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // chkIslandSwapSplit
+            // 
+            this.chkIslandSwapSplit.AutoSize = true;
+            this.chkIslandSwapSplit.Location = new System.Drawing.Point(237, 46);
+            this.chkIslandSwapSplit.Name = "chkIslandSwapSplit";
+            this.chkIslandSwapSplit.Size = new System.Drawing.Size(246, 24);
+            this.chkIslandSwapSplit.TabIndex = 3;
+            this.chkIslandSwapSplit.Text = "Split on island swap to Kronos";
+            this.chkIslandSwapSplit.UseVisualStyleBackColor = true;
+            // 
             // chkMusicNoteAny
             // 
             this.chkMusicNoteAny.Location = new System.Drawing.Point(20, 29);
@@ -3815,11 +3812,10 @@
             // chkFocus
             // 
             this.chkFocus.AutoSize = true;
-            this.chkFocus.Dock = System.Windows.Forms.DockStyle.Top;
-            this.chkFocus.Location = new System.Drawing.Point(15, 34);
+            this.chkFocus.Location = new System.Drawing.Point(15, 25);
             this.chkFocus.Margin = new System.Windows.Forms.Padding(0);
             this.chkFocus.Name = "chkFocus";
-            this.chkFocus.Size = new System.Drawing.Size(274, 44);
+            this.chkFocus.Size = new System.Drawing.Size(256, 44);
             this.chkFocus.TabIndex = 5;
             this.chkFocus.Text = "Prevent the game from pausing\r\nwhen it goes out of focus";
             this.chkFocus.UseVisualStyleBackColor = true;
@@ -3827,6 +3823,7 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.chk_AutoReset);
             this.groupBox6.Controls.Add(this.chkFocus);
             this.groupBox6.Location = new System.Drawing.Point(393, 15);
             this.groupBox6.Margin = new System.Windows.Forms.Padding(0);
@@ -3836,6 +3833,17 @@
             this.groupBox6.TabIndex = 6;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Other options";
+            // 
+            // chk_AutoReset
+            // 
+            this.chk_AutoReset.AutoSize = true;
+            this.chk_AutoReset.Location = new System.Drawing.Point(15, 69);
+            this.chk_AutoReset.Margin = new System.Windows.Forms.Padding(0);
+            this.chk_AutoReset.Name = "chk_AutoReset";
+            this.chk_AutoReset.Size = new System.Drawing.Size(109, 24);
+            this.chk_AutoReset.TabIndex = 6;
+            this.chk_AutoReset.Text = "Auto reset";
+            this.chk_AutoReset.UseVisualStyleBackColor = true;
             // 
             // DiscordLink
             // 
@@ -3848,16 +3856,6 @@
             this.DiscordLink.TabStop = true;
             this.DiscordLink.Text = "Need help setting this up? Ask on Discord";
             this.DiscordLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.DiscordLink_LinkClicked);
-            // 
-            // chkIslandSwapSplit
-            // 
-            this.chkIslandSwapSplit.AutoSize = true;
-            this.chkIslandSwapSplit.Location = new System.Drawing.Point(237, 46);
-            this.chkIslandSwapSplit.Name = "chkIslandSwapSplit";
-            this.chkIslandSwapSplit.Size = new System.Drawing.Size(246, 24);
-            this.chkIslandSwapSplit.TabIndex = 3;
-            this.chkIslandSwapSplit.Text = "Split on island swap to Kronos";
-            this.chkIslandSwapSplit.UseVisualStyleBackColor = true;
             // 
             // Settings
             // 
@@ -4240,5 +4238,6 @@
         private System.Windows.Forms.CheckBox chk_4_D_story;
         private System.Windows.Forms.CheckBox chkIslandILStart;
         private System.Windows.Forms.CheckBox chkIslandSwapSplit;
+        private System.Windows.Forms.CheckBox chk_AutoReset;
     }
 }

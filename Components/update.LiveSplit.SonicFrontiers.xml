@@ -11,6 +11,7 @@
 			<change>Added a toggleable autosplit when island swapping to Kronos</change>
 			<change>Removed Ouranos White CE split as it is no longer functional</change>
 			<change>Fixed a bug that caused the Master King Koco split to not work</change>
+			<change>Added a toggleable autoreset on new game</change>
 		</changelog>
 	</update>
 	<update version="1.7.2">

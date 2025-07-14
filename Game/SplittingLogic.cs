@@ -141,7 +141,7 @@ namespace LiveSplit.SonicFrontiers
 
         bool Reset()
         {
-            return false;
+            return watchers.Status.Current == Status.Quit && watchers.Status.Old == Status.NewGameMenu && Settings.AutoReset; // Reset on new game
         }
 
         bool IsLoading()
