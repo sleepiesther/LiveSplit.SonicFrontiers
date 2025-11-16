@@ -66,6 +66,9 @@ namespace LiveSplit.SonicFrontiers
         Island_Ares_BossRush,
         Island_Chaos_BossRush,
         Island_Ouranos_BossRush,
+        Hacking_01,
+        Hacking_02,
+        Hacking_03,
     }
 
     enum Status
@@ -200,6 +203,9 @@ namespace LiveSplit.SonicFrontiers
             { "w2b01", SonicFrontiers.LevelID.Island_Ares_BossRush },
             { "w3b01", SonicFrontiers.LevelID.Island_Chaos_BossRush },
             { "w1b02", SonicFrontiers.LevelID.Island_Ouranos_BossRush },
+            { "w1h01", SonicFrontiers.LevelID.Hacking_01}, // Chaos hacking
+            { "w1h02", SonicFrontiers.LevelID.Hacking_02}, // Ouranos bridge hacking 
+            { "w1h03", SonicFrontiers.LevelID.Hacking_03}, // Ouranos pyramid hacking
         };
 
         public static readonly Dictionary<string, Status> Status = new Dictionary<string, Status>

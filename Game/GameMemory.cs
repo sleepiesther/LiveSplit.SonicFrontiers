@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Windows.Forms;
 using LiveSplit.ComponentUtil;
 using LiveSplit.Model;
 using LiveSplit.Options;
@@ -116,7 +117,7 @@ namespace LiveSplit.SonicFrontiers
                 if (addresses["APPLICATIONSEQUENCE"].IsZero())
                     return SonicFrontiers.LevelID.None;
 
-                if (game.ReadString(addresses["APPLICATIONSEQUENCE"] + 0xA0, 5, out var _string) && Enums.LevelID.TryGetValue(_string, out var levelid))
+				if (game.ReadString(addresses["APPLICATIONSEQUENCE"] + 0xA0, 5, out var _string) && Enums.LevelID.TryGetValue(_string, out var levelid))
                 {
                     if (levelid != SonicFrontiers.LevelID.MainMenu)
                         return levelid;

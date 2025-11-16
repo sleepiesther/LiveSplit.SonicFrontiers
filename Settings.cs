@@ -82,6 +82,7 @@ namespace LiveSplit.SonicFrontiers
         // Chaos
         public bool Chaos_Tails { get; set; }
         public bool Chaos_KnightFirst { get; set; }
+        public bool Chaos_HackingStart { get; set; }
         public bool Chaos_Hacking { get; set; }
         public bool Chaos_GreenCE { get; set; }
         public bool Chaos_CyanCE { get; set; }
@@ -113,6 +114,7 @@ namespace LiveSplit.SonicFrontiers
         public bool Island_Rhea_story { get; set; }
 
         // Story - Ouranos
+        public bool Ouranos_FirstHackingStart { get; set; }
         public bool Ouranos_Bridge { get; set; }
         public bool Ouranos_SupremeDefeated { get; set; }
         public bool FinalBoss { get; set; }
@@ -130,9 +132,10 @@ namespace LiveSplit.SonicFrontiers
         public bool Ouranos_GreenCE { get; set; }
         public bool Ouranos_YellowCE { get; set; }
         public bool Ouranos_CyanCE { get; set; }
-        //public bool Ouranos_WhiteCE { get; set; }
+		//public bool Ouranos_WhiteCE { get; set; }
+		public bool Ouranos_SecondHackingStart { get; set; }
 
-        public bool Ouranos_FinalDoor { get; set; }
+		public bool Ouranos_FinalDoor { get; set; }
         public bool Island_Ouranos_fishing { get; set; }
 
 
@@ -142,6 +145,9 @@ namespace LiveSplit.SonicFrontiers
 
         //Island swapping
         public bool IslandSwapSplit { get; set; }
+
+        //Enter cyberspace
+        public bool EnterCyberspaceSplit { get; set; }
 
         //Another Story
         public bool Amy_First { get; set; }
@@ -313,6 +319,7 @@ namespace LiveSplit.SonicFrontiers
             chk51_fishing.DataBindings.Add("Checked", this, "Island_Ares_fishing", false, DataSourceUpdateMode.OnPropertyChanged);
             chkChaos_Tails.DataBindings.Add("Checked", this, "Chaos_Tails", false, DataSourceUpdateMode.OnPropertyChanged);
             chkChaos_KnightFirst.DataBindings.Add("Checked", this, "Chaos_KnightFirst", false, DataSourceUpdateMode.OnPropertyChanged);
+            chkChaos_HackingStart.DataBindings.Add("Checked", this, "Chaos_HackingStart", false, DataSourceUpdateMode.OnPropertyChanged);
             chkChaos_Hacking.DataBindings.Add("Checked", this, "Chaos_Hacking", false, DataSourceUpdateMode.OnPropertyChanged);
             chkChaos_GreenCE.DataBindings.Add("Checked", this, "Chaos_GreenCE", false, DataSourceUpdateMode.OnPropertyChanged);
             chkChaos_CyanCE.DataBindings.Add("Checked", this, "Chaos_CyanCE", false, DataSourceUpdateMode.OnPropertyChanged);
@@ -340,7 +347,10 @@ namespace LiveSplit.SonicFrontiers
             chkRhea_Tower5.DataBindings.Add("Checked", this, "Rhea_Tower5", false, DataSourceUpdateMode.OnPropertyChanged);
             chkRhea_Tower6.DataBindings.Add("Checked", this, "Rhea_Tower6", false, DataSourceUpdateMode.OnPropertyChanged);
             chk53_story.DataBindings.Add("Checked", this, "Island_Rhea_story", false, DataSourceUpdateMode.OnPropertyChanged);
+            chkOuranos_FirstHackingStart.DataBindings.Add("Checked", this, "Ouranos_FirstHackingStart", false, DataSourceUpdateMode.OnPropertyChanged);
             chkOuranos_Bridge.DataBindings.Add("Checked", this, "Ouranos_Bridge", false, DataSourceUpdateMode.OnPropertyChanged);
+            chkOuranos_SecondHackingStart.DataBindings.Add("Checked", this, "Ouranos_SecondHackingStart", false,
+                DataSourceUpdateMode.OnPropertyChanged);
             chkOuranos_FinalDoor.DataBindings.Add("Checked", this, "Ouranos_FinalDoor", false,
                 DataSourceUpdateMode.OnPropertyChanged);
             chkOuranos_SupremeDefeated.DataBindings.Add("Checked", this, "Ouranos_SupremeDefeated", false, DataSourceUpdateMode.OnPropertyChanged);
@@ -436,6 +446,8 @@ namespace LiveSplit.SonicFrontiers
                 DataSourceUpdateMode.OnPropertyChanged);
             chkIslandSwapSplit.DataBindings.Add("Checked", this, "IslandSwapSplit", false,
                 DataSourceUpdateMode.OnPropertyChanged);
+            chkEnterCyberspaceSplit.DataBindings.Add("Checked", this, "EnterCyberspaceSplit", false,
+                DataSourceUpdateMode.OnPropertyChanged);
             chk_AmyFirst.DataBindings.Add("Checked", this, "Amy_First", false, DataSourceUpdateMode.OnPropertyChanged);
             chk_KnucklesFirst.DataBindings.Add("Checked", this, "Knuckles_First", false, DataSourceUpdateMode.OnPropertyChanged);
             chk_TailsFirst.DataBindings.Add("Checked", this, "Tails_First", false, DataSourceUpdateMode.OnPropertyChanged);
@@ -469,6 +481,7 @@ namespace LiveSplit.SonicFrontiers
 
             MusicNoteAny = false;
             IslandSwapSplit = false;
+            EnterCyberspaceSplit = false;
 
 
 
@@ -490,7 +503,7 @@ namespace LiveSplit.SonicFrontiers
             Ares_GreenCE = Ares_CyanCE = Ares_BlueCE = Ares_RedCE = Ares_YellowCE = Ares_YellowCE = false;
 
             // Chaos
-            Chaos_Tails = Chaos_KnightFirst = Chaos_Hacking = false;
+            Chaos_Tails = Chaos_KnightFirst = Chaos_Hacking = Chaos_HackingStart = false;
             Chaos_GreenCE = Chaos_CyanCE = Chaos_PinballEnd = Chaos_PinballStart = false;
             Chaos_BlueCE = Chaos_RedCE = Chaos_YellowCE = Chaos_WhiteCE = false;
             Chaos_KnightStart = Chaos_SuperSonic = false;
@@ -505,7 +518,7 @@ namespace LiveSplit.SonicFrontiers
             Ouranos_Bridge = Ouranos_SupremeDefeated = false;
             FinalBoss = true;
             w4_1_story = w4_2_story = w4_3_story = w4_4_story = w4_5_story = w4_6_story = w4_7_story = w4_8_story = w4_9_story = false;
-            Ouranos_BlueCE = Ouranos_RedCE = Ouranos_GreenCE = Ouranos_YellowCE = Ouranos_CyanCE = Ouranos_FinalDoor = false;
+            Ouranos_BlueCE = Ouranos_RedCE = Ouranos_GreenCE = Ouranos_YellowCE = Ouranos_CyanCE = Ouranos_FinalDoor = Ouranos_FirstHackingStart = Ouranos_SecondHackingStart = false;
             Island_Ouranos_fishing = true;
 
             // Arcade mode
@@ -614,6 +627,7 @@ namespace LiveSplit.SonicFrontiers
             settingsNode.AppendChild(ToElement(doc, "Island_Ares_fishing", Island_Ares_fishing));
             settingsNode.AppendChild(ToElement(doc, "Chaos_Tails", Chaos_Tails));
             settingsNode.AppendChild(ToElement(doc, "Chaos_KnightFirst", Chaos_KnightFirst));
+            settingsNode.AppendChild(ToElement(doc, "Chaos_HackingStart", Chaos_HackingStart));
             settingsNode.AppendChild(ToElement(doc, "Chaos_Hacking", Chaos_Hacking));
             settingsNode.AppendChild(ToElement(doc, "Chaos_GreenCE", Chaos_GreenCE));
             settingsNode.AppendChild(ToElement(doc, "Chaos_CyanCE", Chaos_CyanCE));
@@ -641,6 +655,7 @@ namespace LiveSplit.SonicFrontiers
             settingsNode.AppendChild(ToElement(doc, "Rhea_Tower5", Rhea_Tower5));
             settingsNode.AppendChild(ToElement(doc, "Rhea_Tower6", Rhea_Tower6));
             settingsNode.AppendChild(ToElement(doc, "Island_Rhea_story", Island_Rhea_story));
+            settingsNode.AppendChild(ToElement(doc, "Ouranos_FirstHackingStart", Ouranos_FirstHackingStart));
             settingsNode.AppendChild(ToElement(doc, "Ouranos_Bridge", Ouranos_Bridge));
             settingsNode.AppendChild(ToElement(doc, "Ouranos_SupremeDefeated", Ouranos_SupremeDefeated));
             settingsNode.AppendChild(ToElement(doc, "Ouranos_FinalDoor", Ouranos_FinalDoor));
@@ -735,6 +750,7 @@ namespace LiveSplit.SonicFrontiers
             settingsNode.AppendChild(ToElement(doc, "Boss4_11", Boss4_11));
             settingsNode.AppendChild(ToElement(doc, "MusicNoteAny", MusicNoteAny));
             settingsNode.AppendChild(ToElement(doc, "IslandSwapSplit", IslandSwapSplit));
+            settingsNode.AppendChild(ToElement(doc, "EnterCyberspaceSplit", EnterCyberspaceSplit));
             return settingsNode;
         }
 
@@ -747,6 +763,7 @@ namespace LiveSplit.SonicFrontiers
             BossRushStart = ParseBool(settings, "BossRushStart", true);
             IslandILStart = ParseBool(settings, "IslandILStart", true);
             IslandSwapSplit = ParseBool(settings, "IslandSwapSplit", true);
+            EnterCyberspaceSplit = ParseBool(settings, "EnterCyberspaceSplit", true);
             Arcade1_1 = ParseBool(settings, "Arcade1_1", true);
             Amy_First = ParseBool(settings, "Amy_First", false);
             Knuckles_First = ParseBool(settings, "Knuckles_First", false);
@@ -826,6 +843,7 @@ namespace LiveSplit.SonicFrontiers
             Island_Ares_fishing = ParseBool(settings, "Island_Ares_fishing", true);
             Chaos_Tails = ParseBool(settings, "Chaos_Tails", false);
             Chaos_KnightFirst = ParseBool(settings, "Chaos_KnightFirst", false);
+            Chaos_HackingStart = ParseBool(settings, "Chaos_HackingStart", false);
             Chaos_Hacking = ParseBool(settings, "Chaos_Hacking", false);
             Chaos_GreenCE = ParseBool(settings, "Chaos_GreenCE", false);
             Chaos_CyanCE = ParseBool(settings, "Chaos_CyanCE", false);
@@ -853,8 +871,10 @@ namespace LiveSplit.SonicFrontiers
             Rhea_Tower5 = ParseBool(settings, "Rhea_Tower5", false);
             Rhea_Tower6 = ParseBool(settings, "Rhea_Tower6", false);
             Island_Rhea_story = ParseBool(settings, "Island_Rhea_story", true);
+            Ouranos_FirstHackingStart = ParseBool(settings, "Ouranos_FirstHackingStart", false);
             Ouranos_Bridge = ParseBool(settings, "Ouranos_Bridge", false);
             Ouranos_SupremeDefeated = ParseBool(settings, "Ouranos_SupremeDefeated", false);
+            Ouranos_SecondHackingStart = ParseBool(settings, "Ouranos_SecondHackingStart");
             Ouranos_FinalDoor = ParseBool(settings, "Ouranos_FinalDoor");
             FinalBoss = ParseBool(settings, "FinalBoss", true);
             w4_1_story = ParseBool(settings, "w4_1_story", false);
@@ -1020,8 +1040,9 @@ namespace LiveSplit.SonicFrontiers
         }
 
         private void OuranosButton_Click(object sender, EventArgs e)
-        {
-            chkOuranos_Bridge.Checked = false;
+        {   
+            chkOuranos_FirstHackingStart.Checked = false;
+			chkOuranos_Bridge.Checked = false;
             chkOuranos_SupremeDefeated.Checked = false;
             chkFinalBoss.Checked = true;
             chk21_story.Checked = false;
@@ -1040,7 +1061,8 @@ namespace LiveSplit.SonicFrontiers
             chkOuranos_CyanCE.Checked = false;
             //chkOuranos_WhiteCE.Checked = false;
             chk54_fishing.Checked = true;
-            chkOuranos_FinalDoor.Checked = false;
+			chkOuranos_SecondHackingStart.Checked = false;
+			chkOuranos_FinalDoor.Checked = false;
         }
 
         private void ArcadeButton_Click(object sender, EventArgs e)
@@ -1118,6 +1140,7 @@ namespace LiveSplit.SonicFrontiers
         {
             chkChaos_Tails.Checked = false;
             chkChaos_KnightFirst.Checked = false;
+            chkChaos_HackingStart.Checked = false;
             chkChaos_Hacking.Checked = false;
             chkChaos_GreenCE.Checked = false;
             chkChaos_CyanCE.Checked = false;
@@ -1190,5 +1213,5 @@ namespace LiveSplit.SonicFrontiers
         {
             WFocusChange?.Invoke(this, chkFocus.Checked);
         }
-    }
+	}
 }

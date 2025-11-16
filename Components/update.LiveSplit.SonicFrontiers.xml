@@ -12,6 +12,8 @@
 			<change>Removed Ouranos White CE split as it is no longer functional</change>
 			<change>Fixed a bug that caused the Master King Koco split to not work</change>
 			<change>Added a toggleable autoreset on new game</change>
+			<change>Added a toggleable autosplit on entering a cyberspace stage from an island</change>
+			<change>Added a toggleable autosplit when starting the hacking minigames</change>
 		</changelog>
 	</update>
 	<update version="1.7.2">

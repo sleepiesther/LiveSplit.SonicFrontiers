@@ -2,6 +2,7 @@
 using System;
 using System.Linq;
 using LiveSplit.Options;
+using System.Windows.Forms;
 
 namespace LiveSplit.SonicFrontiers
 {
@@ -123,6 +124,14 @@ namespace LiveSplit.SonicFrontiers
             {
                 return true;
             }
+
+            // Enter cyberspace split
+            if (Settings.EnterCyberspaceSplit && watchers.LevelID.Current < LevelID.Island_Kronos && (watchers.LevelID.Old == LevelID.Island_Kronos || watchers.LevelID.Old == LevelID.Island_Ares || watchers.LevelID.Old == LevelID.Island_Chaos || watchers.LevelID.Old == LevelID.Island_Ouranos || watchers.LevelID.Old == LevelID.Island_Another_Ouranos))
+                return true;
+
+            // Hacking start split
+            if ((Settings.Chaos_HackingStart && watchers.LevelID.Current == LevelID.Hacking_01 && watchers.LevelID.Old == LevelID.Island_Chaos) || (Settings.Ouranos_FirstHackingStart && watchers.LevelID.Current == LevelID.Hacking_02 && watchers.LevelID.Old == LevelID.Island_Ouranos) || (Settings.Ouranos_SecondHackingStart && watchers.LevelID.Current == LevelID.Hacking_03 && watchers.LevelID.Old == LevelID.Island_Ouranos))
+                return true;
             
             // Final boss split
             if (Settings.FinalBoss && watchers.LevelID.Current == LevelID.Boss_TheEnd && watchers.EndQTECount.Old == 3 && watchers.EndQTECount.Current == 0)
@@ -316,6 +325,7 @@ namespace LiveSplit.SonicFrontiers
             "Rhea_Tower5" => Settings.Rhea_Tower5,
             "Rhea_Tower6" => Settings.Rhea_Tower6,
             "Island_Rhea_story" => Settings.Island_Rhea_story,
+			"Ouranos_FirstHackingStart" => Settings.Ouranos_FirstHackingStart,
             "Ouranos_Bridge" => Settings.Ouranos_Bridge,
             "Ouranos_SupremeDefeated" => Settings.Ouranos_SupremeDefeated,
             "Ouranos_BlueCE" => Settings.Ouranos_BlueCE,
@@ -325,7 +335,8 @@ namespace LiveSplit.SonicFrontiers
             "Ouranos_CyanCE" => Settings.Ouranos_CyanCE,
             //"Ouranos_WhiteCE" => Settings.Ouranos_WhiteCE,
             "Island_Ouranos_fishing" => Settings.Island_Ouranos_fishing,
-            "Ouranos_FinalDoor" => Settings.Ouranos_FinalDoor,
+			"Ouranos_SecondHackingStart" => Settings.Ouranos_SecondHackingStart,
+			"Ouranos_FinalDoor" => Settings.Ouranos_FinalDoor,
             _ => false,
         };
     }
