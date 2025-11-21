@@ -126,7 +126,7 @@ namespace LiveSplit.SonicFrontiers
             }
 
             // Enter cyberspace split
-            if (Settings.EnterCyberspaceSplit && watchers.LevelID.Current < LevelID.Island_Kronos && (watchers.LevelID.Old == LevelID.Island_Kronos || watchers.LevelID.Old == LevelID.Island_Ares || watchers.LevelID.Old == LevelID.Island_Chaos || watchers.LevelID.Old == LevelID.Island_Ouranos || watchers.LevelID.Old == LevelID.Island_Another_Ouranos))
+            if (Settings.EnterCyberspaceSplit && (watchers.LevelID.Current < LevelID.Island_Kronos || watchers.LevelID.Current == LevelID.Fishing) && (watchers.LevelID.Old == LevelID.Island_Kronos || watchers.LevelID.Old == LevelID.Island_Ares || watchers.LevelID.Old == LevelID.Island_Chaos || watchers.LevelID.Old == LevelID.Island_Ouranos || watchers.LevelID.Old == LevelID.Island_Another_Ouranos))
                 return true;
 
             // Hacking start split
