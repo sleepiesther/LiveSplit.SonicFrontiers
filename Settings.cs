@@ -477,7 +477,7 @@ namespace LiveSplit.SonicFrontiers
             WFocus = false;
             AutoReset = StoryStart = ArcadeStart = Arcade1_1 = true;
             BossRushStart = true;
-            IslandILStart = true;
+            IslandILStart = false;
 
             MusicNoteAny = false;
             IslandSwapSplit = false;
@@ -761,9 +761,9 @@ namespace LiveSplit.SonicFrontiers
             StoryStart = ParseBool(settings, "StoryStart", true);
             ArcadeStart = ParseBool(settings, "ArcadeStart", true);
             BossRushStart = ParseBool(settings, "BossRushStart", true);
-            IslandILStart = ParseBool(settings, "IslandILStart", true);
-            IslandSwapSplit = ParseBool(settings, "IslandSwapSplit", true);
-            EnterCyberspaceSplit = ParseBool(settings, "EnterCyberspaceSplit", true);
+            IslandILStart = ParseBool(settings, "IslandILStart", false);
+            IslandSwapSplit = ParseBool(settings, "IslandSwapSplit", false);
+            EnterCyberspaceSplit = ParseBool(settings, "EnterCyberspaceSplit", false);
             Arcade1_1 = ParseBool(settings, "Arcade1_1", true);
             Amy_First = ParseBool(settings, "Amy_First", false);
             Knuckles_First = ParseBool(settings, "Knuckles_First", false);
