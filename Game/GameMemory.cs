@@ -131,6 +131,10 @@ partial class Memory {
 				else if (no_of_details > 4)
 					no_of_details = 4;
 
+				if (no_of_details < 1) {
+					no_of_details = 1;
+				}
+
 				unsafe {
 					fixed (byte* ptr = buf.Span)
 						addr = (IntPtr)(*(long*)ptr);
