@@ -79,7 +79,15 @@ internal partial class SonicFrontiersComponent : LogicComponent {
 					if (isLoading is not null)
 						state.IsGameTimePaused = isLoading.Value;
 
-					// Update in-game time if available
+					if (memory.IsStartingCyberSpace()) {
+						state.IsGameTimePaused = true;
+					}
+					else if (memory.LevelID.Current <= LevelID.w4_I && memory.IGT.Old == TimeSpan.Zero) {
+						timer.CurrentState.SetGameTime(timer.CurrentState.CurrentTime.GameTime + memory.IGT.Current);
+					}
+
+
+						// Update in-game time if available
 					TimeSpan? gameTime = memory.GameTime();
 					if (gameTime is not null && memory.GameMode.Current != SonicFrontiers.GameMode.Story)
 						timer.CurrentState.SetGameTime(gameTime.Value);
