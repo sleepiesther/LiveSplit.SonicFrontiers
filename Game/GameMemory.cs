@@ -553,7 +553,7 @@ partial class Memory {
 		}
 
 
-
+		GamePaused.Update();
 		StoryModeCyberSpaceCompletionFlag.Update();
 		IsInTutorial = LevelID.Current == SonicFrontiers.LevelID.Tutorial;
 
