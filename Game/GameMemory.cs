@@ -520,12 +520,14 @@ partial class Memory {
 			if (Engine.GetExtension("GameModeLayerStatusExtension", out IntPtr pLayerStatus)) {
 				if (process.Read<byte>(pLayerStatus + 0x48, out byte paused)) {
 					if (paused == 1) {
-						if (!Engine.GetObject("Sonic", out _)) {
+						if (!HasPlayerInformationUpdater.Current) {
 							shouldPlay = false;
 						}
 					}
 					else {
-						shouldPlay = true;
+						if (HasPlayerInformationUpdater.Current) {
+							shouldPlay = true;
+						}
 					}
 					return paused;
 				}
@@ -641,7 +643,7 @@ partial class Memory {
 			return true;
 		}
 		if ((Engine.GameMode != "GameModeTitle")) {
-			if (!HasPlayerInformationUpdater.Current && !shouldPlay && !(LevelID.Current == SonicFrontiers.LevelID.Fishing || LevelID.Current == SonicFrontiers.LevelID.Hacking_01 || LevelID.Current == SonicFrontiers.LevelID.Hacking_02 || LevelID.Current == SonicFrontiers.LevelID.Hacking_03 || LevelID.Current == SonicFrontiers.LevelID.Boss_TheEnd)) {
+			if ((!HasPlayerInformationUpdater.Current || !shouldPlay) && !(LevelID.Current == SonicFrontiers.LevelID.Fishing || LevelID.Current == SonicFrontiers.LevelID.Hacking_01 || LevelID.Current == SonicFrontiers.LevelID.Hacking_02 || LevelID.Current == SonicFrontiers.LevelID.Hacking_03 || LevelID.Current == SonicFrontiers.LevelID.Boss_TheEnd)) {
 				return true;
 			}
 		}
